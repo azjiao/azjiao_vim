@@ -217,7 +217,7 @@ set softtabstop=4
 set shiftwidth=4
 set smarttab
 set autoindent
-set ai!
+" set ai!
 set smartindent
 
 "-------------------------------------------------------
