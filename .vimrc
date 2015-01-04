@@ -77,6 +77,10 @@ let g:airline_theme="badwolf"
 "-------------------------------------------------
 Plugin 'altercation/vim-colors-solarized.git' 
 
+"-------------------------------------------------
+"                 auto pairs 
+"-------------------------------------------------
+Plugin 'jiangmiao/auto-pairs'
 "--------------------------------------------------
 "                java自动补全
 "--------------------------------------------------
@@ -254,13 +258,13 @@ imap <C-l> <C-o>$
 "使用F2键来开关搜索/替换的高亮显示。<C-O>用于在插入模式时临时执行一个普通模式的命令.
 nmap <silent> <F2> :nohlsearch<CR>
 imap <silent> <F2> <c-o>:nohlsearch<CR>
-"引号自动匹配
-:inoremap ( ()<ESC>i
-:inoremap { {}<ESC>i
-:inoremap [ []<ESC>i
-:inoremap " ""<ESC>i
-:inoremap ' ''<ESC>i
-:inoremap < <><ESC>i
+"引号自动匹配.由插件取代。
+" :inoremap ( ()<ESC>i
+" :inoremap { {}<ESC>i
+" :inoremap [ []<ESC>i
+" :inoremap " ""<ESC>i
+" :inoremap ' ''<ESC>i
+" :inoremap < <><ESC>i
 
 let mapleader = ','
 "把<ESC>键映射成"jj",在编辑是很方便，不用去远程操作ESC键了。
