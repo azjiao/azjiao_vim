@@ -67,11 +67,11 @@ let g:tagbar_sort = 0
 "-------------------------------------------------
 "                 状态栏
 "-------------------------------------------------
-if has('gui_running')
+" if has('gui_running')
 Plugin 'bling/vim-airline'
 	"状态栏插件airline主题
 let g:airline_theme="badwolf"
-endif
+" endif
 "-------------------------------------------------
 "                 配色方案插件
 "-------------------------------------------------
@@ -178,9 +178,9 @@ endif
 set cursorline
 
 "设置状态栏显示内容,在gui下该设置被vim-airline插件取代。
-if !has('gui_running')
-	set statusline=%F%m%r%h%w\[FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")} 
-endif
+" if !has('gui_running')
+	" set statusline=%F%m%r%h%w\[FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")} 
+" endif
 
 "状态行显示开关：1启动显示；2总是显示
 set laststatus=2
