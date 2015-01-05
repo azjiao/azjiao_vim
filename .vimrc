@@ -81,6 +81,11 @@ Plugin 'altercation/vim-colors-solarized.git'
 "                 auto pairs 
 "-------------------------------------------------
 Plugin 'jiangmiao/auto-pairs'
+
+"-------------------------------------------------
+"                 java自动补全VJDE
+"-------------------------------------------------
+Plugin 'vim-scripts/Vim-JDE'
 "--------------------------------------------------
 "                java自动补全
 "--------------------------------------------------
@@ -253,7 +258,7 @@ imap <m-j> <down>
 imap <m-k> <up>
 imap <m-l> <right>
 " 在插入模式下使用ctrl-h,l来快速移动到行首和行尾.
-imap <C-h> <C-o>^
+imap <C-a> <C-o>^
 imap <C-l> <C-o>$
 "使用F2键来开关搜索/替换的高亮显示。<C-O>用于在插入模式时临时执行一个普通模式的命令.
 nmap <silent> <F2> :nohlsearch<CR>
