@@ -4,7 +4,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 "set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim/
+set rtp+=~/.vim/bundle/Vundle/
 call vundle#begin()
 " alternatively, pass a path where Vundle should install bundles
 "let path = '~/some/path/here'
@@ -33,11 +33,22 @@ Plugin 'scrooloose/nerdtree.git'
 "--------------------------------------------------
 Plugin 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims=1
+" map <C-kDivide> <plug>NERDCommenterToggle
+
+"--------------------------------------------------
+"                vim-surround 
+"--------------------------------------------------
+Plugin 'tpope/vim-surround.git'
 
 "-------------------------------------------------
 "                 ag
 "-------------------------------------------------
 Plugin 'rking/ag.vim'
+
+"-------------------------------------------------
+"                 CtrlSF 类似sublime的查找文件内容功能
+"-------------------------------------------------
+Plugin 'dyng/ctrlsf.vim'
 
 "-------------------------------------------------
 "                 文件快速搜索
@@ -54,8 +65,8 @@ endif
 "                 多光标vim-multiple-cursors，类似sublime中的多点编辑
 "-------------------------------------------------
 Plugin 'terryma/vim-multiple-cursors'
-let g:multi_cursor_exit_from_visual_mode=0
-let g:multi_cursor_exit_from_insert__mode=0
+" let g:multi_cursor_exit_from_visual_mode=0
+" let g:multi_cursor_exit_from_insert__mode=0
 "-------------------------------------------------
 "                 tagbar
 "-------------------------------------------------
@@ -85,7 +96,7 @@ Plugin 'jiangmiao/auto-pairs'
 "-------------------------------------------------
 "                 java自动补全VJDE
 "-------------------------------------------------
-Plugin 'vim-scripts/Vim-JDE'
+" Plugin 'vim-scripts/Vim-JDE'
 "--------------------------------------------------
 "                java自动补全
 "--------------------------------------------------
@@ -257,7 +268,7 @@ imap <m-h> <left>
 imap <m-j> <down>
 imap <m-k> <up>
 imap <m-l> <right>
-" 在插入模式下使用ctrl-h,l来快速移动到行首和行尾.
+" 在插入模式下使用ctrl-a,l来快速移动到行首和行尾.
 imap <C-a> <C-o>^
 imap <C-l> <C-o>$
 "使用F2键来开关搜索/替换的高亮显示。<C-O>用于在插入模式时临时执行一个普通模式的命令.
@@ -285,6 +296,8 @@ nnoremap <F11> :TagbarToggle<CR>
 "----------------------------------------------------------------
 "取消缺省映射。
 let g:EasyMotion_do_mapping = 0
+"激活智能大小写匹配.
+let g:EasyMotion_smartcase = 1
 "设置前导激活字符
 map <Leader> <Plug>(easymotion-prefix)
 "2字符跳转
@@ -297,6 +310,14 @@ map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>h <Plug>(easymotion-linebackward)
 "修改.vimrc配置后不用退出重启vim就能立即生效.
 noremap <silent> <leader>V :source ~/.vimrc<CR> :filetype detect<CR> :exe  "echo 'vimrc reloaded.'" <CR>
+"--------------------------------------------------------------
+"                      CtrlSF config
+"----------------------------------------------------------------
+" 在命令栏自动输入:CtrlSF，等待完成后续命令。
+map <Leader>sf <Plug>CtrlSFPrompt
+" 用当前光标下的word作为搜索串，等待完成命令。（等待输入路径等）
+map <Leader>sfc <Plug>CtrlSFCwordPath
+
 "--------------------------------------------------------------
 "                      java自动补全设置
 "----------------------------------------------------------------
